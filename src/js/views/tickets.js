@@ -36,7 +36,7 @@ class TicketsUI {
         // Удаление билетов из избранного
         const delFavoriteBtn = document.getElementById(`${i}`);
         delFavoriteBtn.addEventListener('click', function () {
-          const favoriteItem = document.getElementById(`${i}${i}`);
+          const favoriteItem = document.getElementById(`favoriteItem${i}`);
           favoriteItem.parentNode.removeChild(favoriteItem);
           addFavoriteBtn[i].classList.toggle('d-none');
           // addFavoriteBtn[i].insertAdjacentHTML("afterbegin",` 
@@ -97,7 +97,7 @@ class TicketsUI {
   }
 
   static favoriteItemTemplate(tickets, i) {
-    return `<div class="favorite-item  d-flex align-items-start" id='${i}${i}'>
+    return `<div class="favorite-item  d-flex align-items-start" id='favoriteItem${i}'>
     <img src="${tickets[i].airline_logo}" class="favorite-item-airline-img" />
     <div class="favorite-item-info d-flex flex-column">
       <div class="favorite-item-destination d-flex align-items-center">
